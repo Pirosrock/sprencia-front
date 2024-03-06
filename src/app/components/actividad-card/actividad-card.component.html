@@ -1,0 +1,25 @@
+<div class="border border-black bg-primary bg-opacity-25 p-3 rounded card shadow border border-black bg-primary bg-opacity-50 h-100">
+  <div class="d-flex flex-column">
+    <h3>{{actividad.nombre}}</h3>
+    <div class="">
+      <p>{{actividad.resumen}}</p>
+      <p>{{actividad.estado ? 'Disponible' : 'No disponible'}}</p>
+
+      <div class="d-flex gap-2">
+        <p>Horario:</p>
+        <div class="d-flex gap-2">
+          <div *ngFor="let horario of horarios" class="">
+            <small>{{horario.horario.nombre}} |</small>
+          </div>
+          <div *ngIf="horarios.length === 0">
+            <small>No hay horario concertado</small>
+          </div>
+        </div>
+      </div>
+      <p>Precio: {{actividad.precio === 0 ? 'Gratis' : actividad.precio + ' €'}}</p>
+    </div>
+  </div>
+  <div class="mt-auto">
+    <button class="btn" [routerLink]="['/actividad', actividad.id]">ver más</button>
+  </div>
+</div>

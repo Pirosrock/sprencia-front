@@ -1,0 +1,9 @@
+.miboton {
+  background-color: blueviolet;
+  font-weight: bold;
+  padding-inline: 50px;
+}
+
+.miboton:hover {
+  background-color: rgba(137, 43, 226, 0.515)
+}

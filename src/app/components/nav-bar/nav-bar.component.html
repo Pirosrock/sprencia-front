@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg mb-3 p-3 mt-4 rounded border border-black bg-primary bg-opacity-50 shadow-lg">
+
+    <div class="me-auto">
+      <h2 class="titulo ms-3">Sprencia - Vive tu segunda juventud</h2>
+    </div>
+    <div class="">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link"  *ngIf="!usersServices.isLogged()" [routerLink]="['/login']" >Login</a>
+            </li>
+            <li class="nav-item">
+              <a  *ngIf="usersServices.isLogged()" class="nav-link" [routerLink]="['/nuevaactividad']">Nueva actividad</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">Link</a> -->
+              <a class="nav-link" [routerLink]="['/actividades']">Actividades</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+              <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="usersServices.isLogged()" [routerLink]="['/login']" (click)="logOut()" ><i class="fa-solid fa-power-off"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</nav>
+
+

@@ -1,0 +1,21 @@
+.btnVolverArriba {
+  /* display: block; */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  background-color: rgba(102, 51, 153, 0.581);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  transition: opacity 0.4s;
+}
+
+.btnVolverArriba:hover {
+  background-color: rgba(57, 32, 82, 0.581);
+}

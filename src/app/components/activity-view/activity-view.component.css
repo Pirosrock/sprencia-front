@@ -1,0 +1,47 @@
+.opiniones {
+  background-color: rgba(102, 51, 153, 0.581);
+  color: white;
+  /* width: 75%; */
+}
+
+button {
+  background-color: rgba(102, 51, 153, 0.581);
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgba(137, 43, 226, 0.515)
+}
+
+.modifcar {
+  background-color: rgb(15, 180, 192);
+}
+
+.modifcar:hover {
+  background-color: rgb(13, 165, 175);
+}
+
+
+.activar {
+  background-color: #13cc4199;
+}
+
+.activar:hover {
+  background-color: #13cc41ec;
+}
+.btnDesactivar {
+  background-color: rgba(220, 20, 60, 0.685);
+}
+
+.btnDesactivar:hover {
+  background-color: rgba(220, 20, 60, 0.897);
+}
+
+.btnEliminar {
+  background-color: red;
+}
+
+.btnEliminar:hover {
+  background-color: rgba(220, 20, 60, 0.897);
+}
+

@@ -1,0 +1,15 @@
+
+.titulo {
+  font-family: var(--letra-chula);
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  color: beige;
+  font-weight: bold;
+  transition: font-size 0.5s ease;
+}
+
+a:hover {
+  font-size: large;
+}

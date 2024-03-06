@@ -1,0 +1,49 @@
+<h2>Añadir nueva actividad</h2>
+<hr>
+<form novalidate [formGroup]="formNewActivity" (ngSubmit)="getDataForm()" class="w-50">
+
+  <div class="my-2">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" id="nombre" class="form-control" placeholder="introduce tu nombre" formControlName="nombre">
+
+    <p class="error" *ngIf="checkControl('nombre','required')">Campo requerido</p>
+    <p class="error" *ngIf="checkControl('nombre', 'minlength')">Campo tiene una longitud minima de 3 caracteres</p>
+    <p class="error" *ngIf="checkControl('nombre', 'maxlength')">Campo tiene una longitud máxima de 50 caracteres</p>
+
+  </div>
+
+  <div class="my-2">
+    <label for="precio" class="form-label">Precio</label>
+    <input type="number" id="precio" class="form-control" placeholder="introduce el precio" formControlName="precio">
+
+    <p class="error" *ngIf="checkControl('precio', 'required')">La actividad debe tener un precio</p>
+    <p class="error" *ngIf="checkControl('precio', 'min')">El precio debe ser como mínimo 0</p>
+
+
+  </div>
+
+  <div class="my-2">
+    <label for="Resumen" class="form-label">Resumen</label>
+    <input type="text" id="Resumen" class="form-control miResumen" placeholder="Resume la nueva actividad" formControlName="resumen">
+
+    <p class="error" *ngIf="checkControl('resumen','required')">Campo requerido</p>
+    <p class="error" *ngIf="checkControl('resumen','minlength')">La descripcion debe tener como mínimo {{caracterDescription}} caracteres</p>
+
+
+    <p class="error" *ngIf="checkControl('email','pattern')">El email esta escrito de forma incorrecta</p>
+
+  </div>
+
+  <div class="my-2">
+    <label for="estado">Disponibilidad</label>
+    <select id="estado" class="form-select estado" formControlName="estado">
+      <option value="" selected>Disponible/no disponible</option>
+      <option [value]= true>Disponible</option>
+      <option [value]= false>No disponible</option>
+    </select>
+    <p class="error" *ngIf="checkControl('estado', 'required')">Debe marcar una opcion</p>
+  </div>
+  <input [disabled]="!formNewActivity.valid" [ngClass]="{'formInvalid': !formNewActivity.valid}" type="submit" value="Añadir" class="btn miboton">
+
+</form>
+

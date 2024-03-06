@@ -1,0 +1,17 @@
+<section class="container mt-4 w-50 login">
+  <h1 class="text-center brounded border border-black bg-primary bg-opacity-50 shadow-lg p-2 rounded">Login</h1>
+  <hr>
+  <form [formGroup]="formularioLogin" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group mb-2">
+      <label for="username" class="form-label">Nombre usuario</label>
+      <input type="username" class="form-control" id="username" placeholder="Nombre usuario..." formControlName="username">
+    </div>
+    <div class="form-group mb-2">
+      <label for="contraseña" class="form-label">contraseña</label>
+      <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" formControlName="contraseña">
+    </div>
+
+    <button type="submit" class="btn button mt-4 fw-bold px-4">Login</button>
+  </form>
+
+</section>

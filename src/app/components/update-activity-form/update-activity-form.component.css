@@ -1,0 +1,39 @@
+input.ng-invalid.ng-touched {
+  border-bottom: 3px solid tomato;
+}
+
+input.ng-touched.ng-valid {
+  border-bottom: 3px solid green;
+}
+
+input.ng-pristine.ng-untouched {
+  box-shadow: 1px 1px 5px rgb(224, 125, 11);
+}
+
+.error {
+  font-size: 12px;
+  font-weight: bold;
+  color: tomato;
+}
+
+.estado {
+  width: 40%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.formInvalid {
+  opacity: 30%;
+}
+
+.miboton {
+  background-color: blueviolet;
+  font-weight: bold;
+}
+
+.miboton:hover {
+  background-color: rgba(137, 43, 226, 0.515)
+}
